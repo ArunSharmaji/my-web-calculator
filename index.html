@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<title>calculater using table tag</title>
+<style>
+  .a5{ animation: blinker 2s ease infinite}
+	@keyframes blinker{
+		30%{ opacity:0.2;}
+		}
+      .button {border-radius: 50%;
+}
+	table {
+ width: 100%;
+ font-family: arial, sans-serif;
+ border-collapse: ;
+ }
+ th, td {
+ padding: px;
+ text-align: center;
+ border-top: 3px solid #dee2e6;
+ }
+ tbody {
+ background-color: #BAFEFF;
+ }
+/* hover on odd rows  */
+ .a2:hover:nth-child(even){
+ background-color:pink;} 
+  .a4:hover:nth-child(odd){
+ background-color:pink;} 
+/* hover on all rows*/
+ .a1:hover{
+ background-color:green;}
+</style>
+</head>
+<body>
+	<script id = "work">
+		function del()
+        {
+            var a=document.getElementById("result").value;
+            document.getElementById("result").value=a.substring(0,a.length-1);
+        }
+		function on()
+		{ 
+		   var a=document.getElementById("work");
+        }
+     
+        function display(val)
+        {
+            var a=document.getElementById("result");
+            a.value+=val;
+        }
+        function solve()
+        {
+            var res=document.getElementById("result").value;
+            var r=eval(res);
+            document.getElementById("rest").value=r;
+        }
+        function clr()
+        {
+            document.getElementById("result").value="";
+        }
+        
+       
+            </script>
+ <table border = "4">
+ <tbody>
+ <tr>
+ <td colspan="2"><input type="text" id="result"  disabled></td>
+ <td colspan="2"><input type="text" id="rest" disabled placeholder ="Ans"></td>
+  
+ </tr>
+ <tr>
+ <td class="a1"><input type="button" value="C" onclick="clr()"></td>	
+<td class="a1"><input type="button" value="^" onclick="display('^')"></td>
+ <td class="a1" colspan="2">|_s_|_o_|_l_|_a_|_r_|</td>	
+ </tr>
+ <tr>
+ <td class="a1"><input type="button" value=")" onclick="display(')')"></td>
+ <td class="a1"><input type="button" value="×"onclick="display('*')"></td>
+ <td class="a1"><input type="button" value="%"onclick="display('%')"></td>
+ <td class="a1"><input type="button" value="/"onclick="display('/')"></td>
+ </tr>
+ <tr>
+ <td class="a4"><input type="button" value="7"onclick="display('7')"></td>
+ <td class="a2"><input type="button" value="8"onclick="display('8')"></td>
+ <td class="a4"><input type="button" value="9"onclick="display('9')"></td>
+ <td class="a1"><input type="button" value="del"onclick="del()"></td>
+ </tr>
+ <tr>
+ <td class="a4"><input type="button" value="4"onclick="display('4')"></td>
+ <td class="a2"><input type="button" value="5"onclick="display('5')"></td>
+ <td class="a4"><input type="button" value="6"onclick="display('6')"></td>
+ <td class="a1"><input type="button" value="-"onclick="display('-')"></td>
+ </tr> 
+ <tr>
+ <td class="a4" ><input type="button" value="1"onclick="display('1')"></td>
+ <td class="a2"><input type="button" value="2"onclick="display('2')"></td>
+ <td class="a4"><input type="button" value="3"onclick="display('3')"></td>
+ <td class="a1"><input type="button" value="+"onclick="display('+')"></td>
+  </tr>
+  <tr>
+ <td class="a1" ><input type="button" value="("onclick="display('(')"></td>
+ <td class="a2"><input type="button" value="0"onclick="display('0')"></td>
+ <td class="a1"><input type="button" value="."onclick="display('.')"></td>
+ <td class="a1"><input type="button" value="="onclick="solve()"></td>
+  </tr>
+ </tbody>
+ </table>
+ <hr>
+
+ <!--SPAN STYLE="text-decoration:blink"-->
+ <h1 class="a5" id="a5">ARUN HAD MADE A <b><u>"EXCELLENT" </u></bu>PAINTING <br>
+ 	YOU WANT TO SEE</h1>
+ <!--/span-->
+ <a href="lions.jpg"> CLICK HERE </A>
+</body>
+</html>
